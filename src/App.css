@@ -1,38 +1,100 @@
+:root {
+  --cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --white: hsl(0, 0%, 100%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+}
+
 .App {
-  text-align: center;
+  background-color: aquamarine;
+  padding: 24px 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-parfume {
+  width: 100%;
+  padding: 0;
+  border-radius: 8px;
+  background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-parfume > img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-description {
+  padding: 22px;
+}
+
+.card-description h2 {
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: var(--cyan);
+  font-weight: 400;
+  margin-bottom: 14px;
+}
+
+.card-description h3 {
+  font-family: "Fraunces", sans-serif;
+  font-weight: 700;
+  font-size: xx-large;
+  color: var(--very-dark-blue);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.card-description p {
+  color: var(--cyan);
+  font-size: 14px;
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+.product-price {
+  color: var(--cyan);
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  column-gap: 16px;
+  margin-bottom: 24px;
+}
+
+.product-price strong {
+  font-weight: 700;
+  font-family: "Fraunces", sans-serif;
+  font-size: xx-large;
+}
+
+.btn-add-to-card {
+  width: 100%;
+  background-color: var(--cyan);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  height: 44px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  column-gap: 8px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 588px) {
+  .App {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
   }
-  to {
-    transform: rotate(360deg);
+
+  .card-parfume {
+    display: flex;
+    max-width: 560px;
+  }
+
+  .card-parfume > img {
+    width: 50%;
+    height: 100%;
+    border-radius: 8px 0 0 8px;
   }
 }
